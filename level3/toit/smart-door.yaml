@@ -1,0 +1,11 @@
+# filename: door-checker.yaml
+
+name: Smart Door
+entrypoint: smart-door.toit
+pubsub:
+  subscriptions:
+    - "cloud:door/in"
+triggers:
+  on_install: true
+  on_boot: true
+  on_interval: 1s

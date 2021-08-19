@@ -1,0 +1,12 @@
+# filename: light-detector.yaml
+
+# Light detector is a simple Toit app, which measures the level of
+# light in the room once a minute. It prints an "alert" if the level
+# is above the chosen threshold.
+
+name: Door checker
+entrypoint: door-checker.toit
+triggers:
+  on_install: true
+  on_boot: true
+  on_interval: 60s
