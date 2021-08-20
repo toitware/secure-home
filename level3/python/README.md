@@ -46,10 +46,10 @@ $ ./main.py <username> <password> <subscription-name>
 Example:
 
 ```
-$ ./main.py door+test@toitware.com ******** MyPubsubTopic
+$ ./main.py jacob@toit.io ******** MyPubsubTopic
 ```
 
-While the python application is running in one tap run the toit application in another:
+While the python application is running in one terminal window tab, run the toit application in another:
 
 ```
 $ toit run -d <your-device> smart-door.toit
