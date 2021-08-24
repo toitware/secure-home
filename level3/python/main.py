@@ -84,7 +84,7 @@ class Subscribe(multiprocessing.Process):
             channel.close()
 
 def main():
-    subscription = "test"
+    subscription = ""
     if sys.argv[1:]:
         subscription = sys.argv[1]
     else:
