@@ -65,17 +65,19 @@ $ toit project api-keys print-secret <api-key-id>
 
 ## Run
 
-Run the Python application with API key secret and the choosen subscription name as arguments:
+Run the Python application with the choosen subscription name as arguments:
 
 ```
-$ ./main.py <api-key secret> <subscription-name>
+$ ./main.py <subscription-name>
 ```
 
 Example:
 
 ```
-$ ./main.py abcd1234 MyPubsubTopic
+$ ./main.py MyPubsubTopic
 ```
+
+The program will prompt for the API key secret as input.
 
 While the Python application is running in one terminal window tab, run the Toit application `smart-door.toit` in another:
 
