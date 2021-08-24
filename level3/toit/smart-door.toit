@@ -1,3 +1,12 @@
+// Copyright (C) 2021 Toitware ApS. All rights reserved.
+// Use of this source code is governed by an MIT-style license that can be found in the LICENSE file.
+
+/**
+Toit program that demonstrates the Publish/Subscribe messaging service provided by the Toit cloud, 
+to send and receive messages from your IoT devices and receiving these messages in your own backend
+or client application.
+*/
+
 import gpio
 import pubsub
 
