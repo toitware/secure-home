@@ -1,8 +1,9 @@
 # filename: light-detector.yaml
 
+# Specification file for the light detector Toit app.
+#
 # Light detector is a simple Toit app, which measures the level of
-# light in the room once a minute. It prints an "alert" if the level
-# is above the chosen threshold.
+# light in the room once a minute.
 
 name: Light detector
 entrypoint: light-detector.toit
