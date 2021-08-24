@@ -35,12 +35,40 @@ Example:
 $ toit pubsub subscription create cloud:door/out MyPubsubTopic
 ```
 
-## Run
+## API key
 
-Run the Python application with API key secret and the choosen subscription-name as arguments:
+Create a new API key for your Toit project, by executing the Toit CLI command:
 
 ```
-$ ./main.py <username> <password> <subscription-name>
+$ toit project api-keys add <name-of-key>
+```
+
+Example:
+
+```
+$ toit project api-keys add SecureHomeKey
+```
+
+View the list of API keys available in your project with the Toit CLI command:
+
+```
+$ toit project api-keys list
+```
+
+Note the ID of your API key.
+
+View the generated API key secret with the Toit CLI command:
+
+```
+$ toit project api-keys print-secret <api-key-id>
+```
+
+## Run
+
+Run the Python application with API key secret and the choosen subscription name as arguments:
+
+```
+$ ./main.py <api-key secret> <subscription-name>
 ```
 
 Example:
