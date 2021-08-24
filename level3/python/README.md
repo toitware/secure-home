@@ -1,7 +1,7 @@
 # PubSub secure home example
 
 The application will send messages on the `cloud:door/in` and print all message received on `cloud:door/out`.
-Use the `smart-door.toit` program to send replies back.
+Use the `smart-door.toit` program [here](https://github.com/toitware/secure-home/tree/main/level3/toit) to send replies back.
 
 ## Installation
 
@@ -37,7 +37,7 @@ $ toit pubsub subscription create cloud:door/out MyPubsubTopic
 
 ## Run
 
-Run the application with your toit username and password and the choosen subscription-name:
+Run the Python application with API key secret and the choosen subscription-name as arguments:
 
 ```
 $ ./main.py <username> <password> <subscription-name>
@@ -46,13 +46,11 @@ $ ./main.py <username> <password> <subscription-name>
 Example:
 
 ```
-$ ./main.py door+test@toitware.com ******** MyPubsubTopic
+$ ./main.py abcd1234 MyPubsubTopic
 ```
 
-While the python application is running in one tap run the toit application in another:
+While the Python application is running in one terminal window tab, run the Toit application `smart-door.toit` in another:
 
 ```
 $ toit run -d <your-device> smart-door.toit
 ```
-
-![in out](http://g.recordit.co/mtDjYTbFQk.gif)
