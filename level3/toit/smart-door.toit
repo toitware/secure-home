@@ -5,6 +5,8 @@
 Toit program that demonstrates the Publish/Subscribe messaging service provided by the Toit cloud, 
 to send and receive messages from your IoT devices and receiving these messages in your own backend
 or client application.
+This example shows a smart home security system that listens on a magnetic door switch and sends 
+a message using PubSub subscriptions when the door status changes.
 */
 
 import gpio
