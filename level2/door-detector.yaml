@@ -1,8 +1,7 @@
-# filename: light-detector.yaml
+# Copyright (C) 2021 Toitware ApS. All rights reserved.
+# Use of this source code is governed by an MIT-style license that can be found in the LICENSE file.
 
-# Light detector is a simple Toit app, which measures the level of
-# light in the room once a minute. It prints an "alert" if the level
-# is above the chosen threshold.
+# Specification file for the door checker Toit app.
 
 name: Door checker
 entrypoint: door-checker.toit
