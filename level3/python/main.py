@@ -100,8 +100,7 @@ def main():
     subscribeProcess.start()
 
     channel = setup_channel(accessToken)
-    try:
-        print("Write a message to send:")
+    try:        
         while True:
             line = sys.stdin.readline().strip()
             print("sending: '" + line+ "'")
