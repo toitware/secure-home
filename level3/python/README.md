@@ -7,9 +7,9 @@ Use the `smart-door.toit` program [here](https://github.com/toitware/secure-home
 
 First, install `pyhton3` and `pip3`
 
-If you are on Windows, follow the setup guide [here](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/venv-win.html).
+Option A: If you are on Windows, follow the setup guide [here](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/venv-win.html).
 
-On MacOS and Linux, follow the steps below:
+Option B: On MacOS and Linux, follow the steps below:
 
 Install `virtualenv`:
 
@@ -19,6 +19,8 @@ Then, setup and activate `virtualenv` for your project:
 
     virtualenv -p python3 env
     source env/bin/activate
+
+## Dependencies
 
 Next install dependencies:
 
