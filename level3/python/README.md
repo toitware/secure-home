@@ -63,6 +63,8 @@ View the generated API key secret with the Toit CLI command:
 $ toit project api-keys print-secret <api-key-id>
 ```
 
+Use the printed *secret* in the next step, when running the Python script.
+
 ## Run
 
 Run the Python application with the choosen subscription name as arguments:
@@ -77,7 +79,7 @@ Example:
 $ ./main.py MyPubsubTopic
 ```
 
-The program will prompt for the API key secret as input.
+The program will prompt for the API key secret as input. Enter the secret, printed in the previous step.
 
 While the Python application is running in one terminal window tab, run the Toit application `smart-door.toit` in another:
 
