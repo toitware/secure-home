@@ -87,4 +87,10 @@ While the Python application is running in one terminal window tab, run the Toit
 $ toit run -d <your-device> smart-door.toit
 ```
 
+Example:
+
+```
+$ toit run -d MyDevice smart-door.toit
+```
+
 ![animation](./dooropen.gif)
