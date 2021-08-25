@@ -3,9 +3,15 @@
 The application will send messages on the `cloud:door/in` and print all message received on `cloud:door/out`.
 Use the `smart-door.toit` program [here](https://github.com/toitware/secure-home/tree/main/level3/toit) to send replies back.
 
-## Installation
+## Installation of Python and pip
 
-First, install `pyhton3` and `pip3`, and then install `virtualenv`:
+First, install `pyhton3` and `pip3`
+
+If you are on Windows, follow the setup guide [here](https://mothergeo-py.readthedocs.io/en/latest/development/how-to/venv-win.html).
+
+On MacOS and Linux, follow the steps below:
+
+Install `virtualenv`:
 
     pip3 install virtualenv
 
@@ -18,6 +24,12 @@ Next install dependencies:
 
 ```
 $ pip install -r requirements.txt
+```
+
+Or in this case, where the only requirement is the toit-api, just run the install command with:
+
+```
+$ pip install toit-api==0.11.2
 ```
 
 ## Setup
