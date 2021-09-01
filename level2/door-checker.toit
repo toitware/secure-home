@@ -7,10 +7,11 @@ And turns on an LED when the door is open.
 */
 
 import gpio
+
+pin ::= gpio.Pin 26 --input
+led ::= gpio.Pin 33 --output
  
 main:
- pin := gpio.Pin 26 --input
- led := gpio.Pin 33 --output
  while true:
    led.set pin.get
    sleep --ms=1

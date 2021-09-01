@@ -9,8 +9,9 @@ It prints an alert if the level is above the chosen threshold.
 import gpio
 import gpio.adc
 
+ADC1 ::= adc.Adc (gpio.Pin.in 34)
+
 main:
-  threshold := 2.5
-  ADC1 ::= adc.Adc (gpio.Pin.in 34)
+  threshold := 3
   if ADC1.get > threshold:
     print "Light is on"
