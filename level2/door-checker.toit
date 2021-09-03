@@ -14,4 +14,4 @@ led ::= gpio.Pin 33 --output
 main:
  while true:
    led.set pin.get
-   sleep --ms=1
+   yield

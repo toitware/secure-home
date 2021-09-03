@@ -12,6 +12,7 @@ This example shows a smart home security system that listens on a magnetic door 
 import gpio
 import pubsub
 
+
 // Topics:
 INCOMING_TOPIC ::= "cloud:door/in"
 OUTGOING_TOPIC ::= "cloud:door/out"
@@ -22,7 +23,7 @@ led ::= gpio.Pin 33 --output
 
 // Logic variables: 
 alarm_activated := true
-alarm_flag := false
+is_door_open := false
 
 
 main:
@@ -40,31 +41,25 @@ subscriber_publisher:
       alarm_activated = false
     if msg.payload.to_string == "status":
       pubsub.publish OUTGOING_TOPIC "alarm activated: $alarm_activated"
-      alarm_activated = false
 
 // Basic logic for the door checker:
 door_check: 
   while true:
-    if alarm_activated == false:
+    if not alarm_activated:
       led.set 0
       sleep --ms=500
-    else:
-      if pin.get==0:
-        if alarm_flag==false:
-          print "Door open"
-          pubsub.publish OUTGOING_TOPIC "Door open"
-          alarm_flag = true
-      if pin.get==1:
-        if alarm_flag==true:
-          print "Door closed"
-          pubsub.publish OUTGOING_TOPIC "Door closed"
-          alarm_flag = false
-      if alarm_flag==true:
-        led.set 1
-        sleep --ms=500
-      if alarm_flag==false: 
-        led.set 0
-        sleep --ms=500
+      continue
+    
+    old_is_open := is_door_open
+    pin_value := pin.get
+    is_door_open = pin_value == 0
 
-
-        
+    if old_is_open != is_door_open:
+      if is_door_open:
+        print "Door open"
+        pubsub.publish OUTGOING_TOPIC "Door open"
+      else:
+        print "Door closed"
+        pubsub.publish OUTGOING_TOPIC "Door closed"
+    led.set pin_value
+    sleep --ms=500
